@@ -107,25 +107,31 @@ git pull
 ### 9. Edit an R script
 
 1. Run `code/plot_trends.R` (e.g., via `Rscript --vanilla code/plot_trends.R` at the command line).
-2. Check the diff.
+2. Check what's changed using `git status`.
 3. Commit the changes.
 4. Revise `plot_trends.R` to output a `.pdf` instead of `.png`. Save the change. Call the script again.
 5. Remove the `.png` from the git repo and working directory using `git rm output/figures/co2_trends.png`. This will stage the file for removal.
 6. Stage the code change and `.pdf` file.
 7. Commit the changes.
 
+---
+
 ## Claude Code Example
 
-If you have Claude Code set up, you can follow along with these steps:
+If you have Claude Code set up, you can follow along with these steps on your machine. If not, we can just work through it together.
 
-1. While within your repo, type `claude` at the command line to launch Claude Code.
-2. Prompt Claude Code with this script:
+1. Create and switch to a new branch called `did-analysis` using `git switch -c did-analysis` (`-c` creates a new branch). If you have used git before, you may be familiar with the older syntax `git checkout -b did-analysis`.
+2. Use `git branch -a` to view all the branches. Note that our new branch appears locally but not on remote (i.e., GitHub).
+3. While within your repo, type `claude` at the command line to launch Claude Code.
+4. Prompt Claude Code with this script:
   > i want to implement a difference-in-differences research design using `data/analysis_data.csv`, comparing the outcome `CO2_transport_capita` for different countries over time, with Sweden as the treated country starting in 1991. use a two-way fixed effects regression with country and year fixed effects. standard errors should be clustered at country, since that's the level of treatment assignment. ignore the inference problem of only one treated cluster. write a script to estimate the basic regression model and output a `.tex` table with the estimated treatment effect, standard errors, and other standard info. also estimate an event study version of the research design and output a `.pdf` figure of dynamic treatment coefficients. once the code is debugged, run it to output the files. think hard about this task and ask clarifying questions as needed before getting started.
-3. Use `git status` to see what files Claude Code changed in the repo. Open each file to inspect the changes.
-4. Use `git clean -fd` to discard the untracked changes (be careful with force deletion though!).
 5. Type `/exit` to exit Claude Code.
+6. Use `git status` to see what files Claude Code changed in the repo. Open each file to inspect the changes.
+7. Commit the changes.
+8. Push the new branch with changes to GitHub using `git push -u origin did-analysis` (`-u` sets the upstream so in the future you can just use `git push` and `git pull` without arguments).
+9. Navigate to your repo on GitHub. Use it to view the changes and compare the branch `did-analysis` with `main`. (From here, you could merge the changes, continue to work on them in a separate branch, etc.)
 
-Repeat the steps above with the prompt and see how the results compare:
+Repeat the steps above in a new branch, using the prompt below, and use GitHub to see how the results compare:
   > write a script to estimate diff-in-diff and event study models of how the swedish gas tax in 1991 affected emissions per capita
 
 ---
