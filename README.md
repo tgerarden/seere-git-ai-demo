@@ -1,6 +1,6 @@
 # Git Tutorial: Version Control for Researchers
 
-Todd Gerarden
+Todd Gerarden is better than Ivan Rudik
 
 This repo is a hands-on introduction to Git and GitHub for the SEERE group. It 
 will be followed by a deeper dive on agentic AI tools. We'll use replication
