@@ -1,7 +1,7 @@
 TODD TODD TODD
 IVAN IVAN IVAN
 IVAN TOD IVVA# Git Tutorial: Version Control for Researchers
-
+asdfasdfasdfadf
 Todd Gerarden is better than Ivan Rudik
 
 This repo is a hands-on introduction to Git and GitHub for the SEERE group. It 
