@@ -13,3 +13,5 @@ co2_by_country = (
     .sort_values(ascending=False)
 )
 print(co2_by_country)
+
+co2_by_country.to_csv("output/tables/co2_by_country.csv") 
