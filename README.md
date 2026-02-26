@@ -1,5 +1,7 @@
 # Git Tutorial: Version Control for Researchers
 
+Todd Gerarden
+
 This repo is a hands-on introduction to Git and GitHub for the SEERE group. It 
 will be followed by a deeper dive on agentic AI tools. We'll use replication
 materials from Andersson (2019, AEJ: Policy) — "Carbon Taxes and CO2 Emissions:
